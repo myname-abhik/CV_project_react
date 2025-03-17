@@ -1,0 +1,413 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    
+}
+body
+{
+    
+    background-color: black !important;
+}
+.home_page_frame
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+nav
+{
+    /* background-color: #ec3434; */
+    background-image: linear-gradient(180deg,  rgba(7, 7, 7, 0.623) ,rgba(140, 140, 140, 0) );
+    position: fixed;
+
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    position: fixed;
+    z-index: 10;
+    /* position: absolute; */
+
+   
+}
+.Upper_frame
+{
+    /* position: relative; */
+}
+.nav-content
+/* {  position: absolute; */
+{
+    width: 90%;
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    /* font-weight: 600; */
+    /* background-color: #992d2d; */
+    margin-left: 5%;
+   
+   color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    
+}
+.nav-content .content_box {
+    
+    font-size: 20px;
+   font-weight: 600;
+}
+.Search
+{   
+    display: flex;
+    margin-left: 15%;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.26);
+    color: #fff;
+}
+.Search input
+{
+    width: 70%;
+    height: 30px;
+    /* margin-left: 50px; */
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+.Search input[type="text"]::placeholder {
+    color: white; 
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+}
+.Search .Finder 
+{
+    font-size: 15px;
+}
+#Browse
+{
+    display: flex;
+    align-items: center;
+}
+.Account_Details 
+{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    margin-left: 5%;
+}
+.Account_details_box
+{
+    display: flex;
+    flex-direction: column;
+}
+#Signin
+{
+    font-weight: 800;
+    
+}
+.Crousal_section
+{
+    position: relative;
+}
+.first_swiper-container {
+    overflow: hidden; /* Contains slides within the visible area */
+    /* position: relative; */
+    position: absolute;
+    width: 100%; /* Ensure Swiper container takes full width */
+    height: 850px /* Adjust as needed */
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #da0a0a;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Only include these if necessary */
+    /* backface-visibility: visible; */
+    /* transform: none; */
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the entire slide */
+  }
+ .Down-shadow
+ {
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+    position: absolute;
+    z-index: 4;
+    top: calc(850px/2);
+ }
+ .crousal-content
+ {
+    width: 50%;
+    height: auto;
+    /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 1)); */
+    /* background-color: red; */
+    position: absolute;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: calc(850px/2);
+    gap: 10px;
+
+ }
+ .crousal-content .Movies , .Features ,.Description
+ {
+    width: 70%;
+    height: auto;
+    /* background-color: red; */
+    display: flex;
+    text-align: left;
+    padding-left: 70px;
+    font-family: "Inter", sans-serif;
+    gap: 40px;
+    color: #fff;
+ }
+ .Movies
+ {  
+    font-size: 64px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    letter-spacing: 10px;
+ }
+ .Features
+ {
+     display: flex;
+    
+     align-items: center;
+     font-size: 16px;
+     font-weight: 600;
+     /* justify-content: space-around; */
+     gap: 30px;
+     /* background-color: #ffffff; */
+ }
+.Line
+ {
+    width: 2px;
+    height: 30px;
+    background-color: white
+ }
+ .Description
+ {
+    font-size: 20px;
+ }
+
+ .swiper-pagination-bullet
+{   width: 35px !important;
+    height: 7px !important;
+    border-radius: 5px !important;
+
+    background: #F3F3F3  !important;
+    transition: all 0.5s ease;
+}
+
+.Play,.Add-to-list
+{
+    width: 182px;
+    height: 71px;
+    border-radius: 5px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Play
+{
+    background-color: rgba(234, 105, 19, 0.63);
+}
+.Play:hover {
+    background-color: rgba(234, 105, 19, 0.90);
+    transition: all  0.5s ease ;
+    cursor: pointer;
+  }
+.Add-to-list
+{
+    background-color: rgba(255, 255, 255, 0.21);
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+.Add-to-list:hover {
+    background-color: rgba(255, 255, 255, 0.40);
+    transition: all  0.5s ease ;
+    cursor: pointer;
+  }
+.Child_play
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.Lower_frame_Top_Pickups
+{
+/* width: 100%; */
+max-width: 1900px;
+/* border: 1px solid red; */
+height: 727px;
+margin-top: 845px;
+/* display: block; */
+background-color: black;
+font-family: "Inter", sans-serif;
+display: flex;
+flex-direction: column;
+justify-content: left;
+/* align-items: center; */
+gap: 40px;
+padding-left: 80px;
+margin-left: auto;
+margin-right: auto;
+}
+.Movie_list
+{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 40px;
+    margin: 0;
+    width: 90%;
+    
+}
+.Title_pickup
+{
+    color: #F3F3F3;
+    font-size: 32px;
+    font-weight: 800;
+    max-width: 1900px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.Title_pickup .right_arrow
+{
+
+    font-size: 50px;
+}
+.Movie_list .Movies
+{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* gap: 20px; */
+    width: 255px;
+    height: 500px;
+    /* background-color: red; */
+    color: #F3F3F3;
+    
+}
+.Movie_image img
+{
+    width: 100%;
+    height: 377px;
+    /* Movie_image */
+    object-fit: cover;
+}
+
+.Movie_name
+{
+    width: auto ;
+    height: auto;
+    font-size: 20px;
+    display:flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 10px;
+    
+    letter-spacing: 0px;
+    font-weight: 500;
+.Movie_name {
+    line-height: 1; /* Replace 'line-spacing' with 'line-height' */
+}
+    /* background-color: green;     */
+}
+.Movies .Features
+{
+    width: auto ;
+    height: auto;
+    font-size: 20px;
+    font-weight: 600;
+    /* background-color: blue; */
+    display:flex;
+    align-items: center;
+    padding: 0;
+    font-weight: 800;
+    letter-spacing: 0px;
+    margin: auto;
+    padding: auto;
+}
+.c-scrollbar_thumb {
+    background: rgba(234, 105, 19, 1) !important; 
+  }
+
+
+
+  
+  .Second_swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .second_swiper-slide {
+    text-align: center !important;
+    font-size: 18px !important;
+    background: black !important;
+    display: flex !important;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    width: 400px !important;
+    
+  }
+  /* .Second_swiper-wrapper
+  {
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     gap: 50px;
+
+  } */
+  
+  .second_swiper-slide img {
+    display: block !important;
+    width: 100% !important;
+    /* height: 100% !important; */
+    object-fit: cover !important; /* Ensures images cover the entire slide */
+  }
+  @media (max-width: 760px) {
+    .second_swiper-button-next {
+      right: 20px !important;
+      transform: rotate(90deg) !important;
+    }
+
+    .second_swiper-button-prev {
+      left: 20px !important;
+      transform: rotate(90deg) !important;
+    }
+  }
+  .second_swiper-button-next ,.second_swiper-button-prev
+  {
+     color: rgba(234, 105, 19, 0.63) !important;
+  }
+
+
+ 
+  
