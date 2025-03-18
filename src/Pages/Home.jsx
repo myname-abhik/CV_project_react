@@ -15,6 +15,7 @@ import { Movie } from '@mui/icons-material';
 import Movies from '../component/Movies';
 import movie_pickups from '../assets/Movies_info/Movie_pickup.json'
 import Lenis from "@studio-freight/lenis";
+import Navbar from '../component/Navbar';
 
 
 const Home = () => {
@@ -41,25 +42,10 @@ const Home = () => {
 const pagref = useRef(null)
   return (
     <>
+   
         <div className="home_page_frame" id="main_page">
         <div className="Upper_frame">
-    <nav>
-    <div className="nav-content">
-            <div className="logo">Logo</div>
-         <div className="content_box">Home</div>
-            <div className="content_box" id="Browse">Browse<i className="material-icons">arrow_drop_down</i></div>
-            <div className="content_box">Movies</div>
-            <div className="content_box">Chats</div>
-            <div className="Search">
-                <div className="Finder"><i className="material-icons">search</i></div>
-                <input type="text" placeholder="Search" ></input>
-            </div>
-            <div className="Account_Details"><div className="Account_Logo"><i className="material-icons">person</i></div>
-             <div className="Account_details_box"><span>Account</span> <span id="Signin">Signin</span></div>
-            </div>
-        </div>
-
-    </nav>
+    
 
 
     <div className="Crousal_section">
@@ -115,9 +101,9 @@ const pagref = useRef(null)
     
        </Swiper>
        </div>
-       
+     </div>
+     <div className='Categories'>
       
- 
      </div>
         </div>
     </>

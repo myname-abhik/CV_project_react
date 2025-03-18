@@ -21,7 +21,7 @@ const Crousal = ({ image, ele, Description , genre}) => {
           <div className="Description">
             <div className="Play">
               <div className="Child_play">
-                <i className="material-icons">play_arrow</i> Play Now
+                <i className="material-icons Child_arrow">play_arrow</i> Play Now
               </div>
             </div>
             <div className="Add-to-list">Add to List</div>
