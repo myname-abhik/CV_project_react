@@ -523,7 +523,10 @@ i.Child_arrow
 {
     font-size: 20px;
 }
-
+nav
+{
+    display: none;
+}
       
     
  
