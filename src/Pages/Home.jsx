@@ -88,13 +88,14 @@ const pagref = useRef(null)
    autoplay={{ delay: 3000, disableOnInteraction: true }}
    navigation={ true }
    slidesPerView={5}
+   className='second_swiper'
  
        
        >
       
        {movie_pickups.map((movie)=>(
          <SwiperSlide className='second_swiper-slide'>
-         <Movies image={movie.Movie_poster} features={movie.Movie_feature} title={movie.Movie_title}/>
+         <Movies className="second-swiper-movies" image={movie.Movie_poster} features={movie.Movie_feature} title={movie.Movie_title}/>
          </SwiperSlide>
        ))}
        
