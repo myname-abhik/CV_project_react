@@ -85,8 +85,7 @@ const pagref = useRef(null)
        <Swiper
        modules={[Navigation, Pagination, Autoplay]}
    loop={true}
-   autoplay={{ delay: 3000, disableOnInteraction: true }}
-   navigation={ true }
+   autoplay={{ delay: 3000}}
    slidesPerView={'auto'}
    className='second_swiper'
  
