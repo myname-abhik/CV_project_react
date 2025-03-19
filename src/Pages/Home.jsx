@@ -87,7 +87,7 @@ const pagref = useRef(null)
    loop={true}
    autoplay={{ delay: 3000, disableOnInteraction: true }}
    navigation={ true }
-   slidesPerView={5}
+   slidesPerView={'auto'}
    className='second_swiper'
  
        
