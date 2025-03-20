@@ -19,26 +19,6 @@ import Navbar from '../component/Navbar';
 
 
 const Home = () => {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.9, // Adjusts smoothness
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
-      direction: "vertical", // Can be "horizontal" as well
-      smooth: true,
-      smoothTouch: false, // Set true if you want smooth scrolling on touch devices
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => lenis.destroy(); // Cleanup on unmount
-  }, []);
-
-
 const pagref = useRef(null)
   return (
     <>

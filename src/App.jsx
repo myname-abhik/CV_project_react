@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Lenis from "@studio-freight/lenis";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -10,9 +11,28 @@ import Mov from './component/Mov';
 import Signup from './component/Signup';
 import Login from './component/Login';
 import Chat from './component/Chat';
+import Movs from './component/Movs';
 
 function App() {
   const [count, setCount] = useState(0)
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.9, // Adjusts smoothness
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
+      direction: "vertical", // Can be "horizontal" as well
+      smooth: true,
+      smoothTouch: false, // Set true if you want smooth scrolling on touch devices
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy(); // Cleanup on unmount
+  }, []);
 
   return (
   
@@ -24,6 +44,7 @@ function App() {
         <Route path='/Chat' element={<Chat/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Signup' element={<Signup/>}/>
+        <Route path='/Movies/:id' element={<Movs/>}/>
 
       </Routes>
       <Footer/>
