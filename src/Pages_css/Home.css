@@ -190,7 +190,7 @@ nav
     /* background-color: red; */
     display: flex;
     text-align: left;
-    padding-left: 70px;
+    padding-left: 20px;
     font-family: "Inter", sans-serif;
     gap: 40px;
     color: #fff;
@@ -212,8 +212,6 @@ nav
      font-weight: 600;
      /* justify-content: space-around; */
      gap: 30px;
-     width: auto;
-     height: auto;
      /* background-color: red; */
      display: flex;
      text-align: left;
