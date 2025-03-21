@@ -77,7 +77,6 @@ const Movs = () => {
               <video
                 ref={videoRef}
                 className={Styles.video}
-                muted
                 autoPlay
                 onLoadedMetadata={handleLoadedMetadata}
               >

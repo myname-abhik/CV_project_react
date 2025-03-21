@@ -198,6 +198,7 @@ object-fit: cover;
 {
     width: 100%;
     height: 90vh;
+    position: absolute;
     object-fit: cover;
     overflow-y: hidden;
 }
@@ -217,13 +218,14 @@ object-fit: cover;
     
 }
 
-.Main_containerr .image
+.Main_containerr .image,.video
 {
-    width: 100%;
+    width: 390px;
+    
     height: 450px;
     object-fit: cover;
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     z-index: 1;
 }
