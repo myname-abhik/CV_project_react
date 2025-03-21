@@ -47,7 +47,7 @@ function App() {
         <Route path='/Movies/:id' element={<Movs/>}/>
 
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
     
   )

@@ -17,7 +17,7 @@ const Movs = () => {
           const response = await axios.get(`https://cv-backend-theta.vercel.app/use/insert/${id.id}`)
           SetData(response.data)
           // console.log(response.data);
-          console.log(response.data);
+          // console.log(response.data);
           
           
         }catch(e){
@@ -44,8 +44,12 @@ const Movs = () => {
   <p>Loading image...</p>
 )}
                 
+{data?.[0]? (
+  <Detailed_description val={data}/>
+) : (
+  <p>Loading image...</p>
+)}
                 
-                <Detailed_description/>
                 <Dropdown_shadow/>
 
             </div>
