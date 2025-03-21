@@ -18,7 +18,7 @@ const Detailed_description = ({val}) => {
                             <div className={Styles.Cast_name}>Cast : {val[0].Cast}</div>
                             <div className={Styles.Movie_desc}>Description : {val[0].Description}</div>
                             <div className={Styles.buttons}>
-                                <div className={Styles.Play_now}><i className="material-icons right_arrow">play_arrow</i>Play now</div>
+                                <div className={Styles.Play_now}><i className={`material-icons right_arrow ${Styles.meterial}`} >play_arrow</i>Play now</div>
                                 <div className={Styles.Watch_later}>Watch Trailer</div>
                             </div>
                         </div>

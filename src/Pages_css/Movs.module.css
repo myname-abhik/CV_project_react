@@ -5,13 +5,15 @@
     max-width: 1920px;
     height: 100vh;
     position: relative;
+    overflow-x: hidden !important;
+    /* overflow-y:hidden !important; */
     /* overflow-x: hidden; */
     
 }
 .Main_containerr .image 
 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -33,7 +35,7 @@
  {
      width: 100%;
     height: 750px;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.425),rgb(0, 0, 0));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.616),rgb(0, 0, 0));
     position: absolute;
     z-index: 2;
     top: 169px;
@@ -129,7 +131,7 @@ object-fit: cover;
     /* background-color: rgb(180, 51, 51); */
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 400;
 }
 .buttons
 {
@@ -167,4 +169,176 @@ object-fit: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.loader
+{
+    width:100%;
+    height:100%;
+    background-color: rgb(18, 19, 18) !important;
+    /* overflow-x: hidden !important; */
+    overflow-y:hidden !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 7;
+}
+.loader > div{
+    width: 50px;
+    height: 50px;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    border: 10px solid #221f1f;
+    animation: rotation 1s  infinite linear;
+
+    border-top-color:rgba(234, 105, 19, 0.63);
+
+}
+.video
+{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    overflow-y: hidden;
+}
+@keyframes rotation{
+    100%{transform: rotate(360deg);}
+}
+@media(max-width:640px){
+    *,body,#root
+    {
+     width: 390px;
+    }
+.Main_containerr
+{
+    
+    max-width: 390px;
+    height: 450px;
+    
+}
+
+.Main_containerr .image
+{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.Down_shadow_second{
+    height: 190px;
+    top: 260px;
+}
+.Detailed_desc{
+    /* display:none !important; */
+    width: 380px;
+    height: 270px;
+   
+    margin-left: 0px;
+    top: 170px;
+    /* background-color: red; */
+    z-index: 3;
+    padding-left:10px ;
+}
+.Detailed_desc{
+    display: flex;
+    flex-direction: column;
+    color: white !important;
+    gap: 10px;
+   }
+   .Title{
+    /* background-color: rgb(0, 255, 42); */
+    width: 300px;
+    font-size: 34px;
+    /* text-align: center; */
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    
+ }
+ .Genre{
+    /* background-color: rgb(255, 192, 0); */
+    font-family: "Inter", sans-serif;
+    
+    font-size: 15px;
+    font-weight: bold;
+    width: 300px;
+    height: 36px;
+ }
+ .Desc{
+    /* background-color: rgb(209, 14, 14); */
+    width: auto;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+    /* font-size: 10px; */
+    gap: 5px;
+    letter-spacing: 7%;
+ }
+ .image_2
+{
+width: 100px !important;
+height: 150px !important;
+object-fit: cover;
+}
+.Dir_cast_desc_button
+{
+    width: 200px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    /* background-color: gray; */
+}
+.Imdb_rating
+{
+    width: 100px;
+    height: 124px;
+    font-size: 15px;
+    /* background-color: gray; */
+}
+.Dir_name
+{
+   
+    font-size: 10px;
+   
+}
+.Cast_name
+{
+   
+    font-size: 10px;
+
+}
+.Movie_desc
+{
+   
+    font-size: 10px;
+}
+.buttons
+{
+    width: auto;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+    gap:10px;
+}
+.Play_now
+{
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    gap: 0px;
+}
+.meterial{
+    width: 18px;
+    font-size: 15px;
+}
+.Watch_later
+{
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+   
+}
+
 }
