@@ -1,8 +1,8 @@
 import React from 'react'
-import '../Pages_css/Movs.css'
+import Styles from '../Pages_css/Movs.module.css'
 const Dropdown_shadow = () => {
   return (
-    <div className='Down-shadow'></div>
+    <div className={Styles.Down_shadow_second}></div>
   )
 }
 

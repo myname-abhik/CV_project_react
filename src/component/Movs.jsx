@@ -1,18 +1,52 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect ,useState} from 'react'
 import Detailed_description from './Detailed_description'
-import '../Pages_css/Movs.css'
 import Dropdown_shadow from './Dropdown_shadow'
+import  Styles  from '../Pages_css/Movs.module.css'
+import axios from 'axios'
+import { useParams } from 'react-router-dom';
 
 const Movs = () => {
-    
+    const [data, SetData] = useState(null);
+    const [loading, SetLoading] = useState(true);
+    const id =  useParams();
+    useEffect(() => {
+      const fetchData = async() =>{
+        try{
+         
+          const response = await axios.get(`https://cv-backend-theta.vercel.app/use/insert/${id.id}`)
+          SetData(response.data)
+          // console.log(response.data);
+          console.log(response.data);
+          
+          
+        }catch(e){
+          console.log(e);
+          
+        }
+        finally{
+          SetLoading(false)
+        }
+      }
+      if(id){
+      fetchData()
+      }
+      
+    },[])
   return (
     <>
-        <div className='Main_containerr'>
-            <div className='Parent_content'>
-                <img src='https://res.cloudinary.com/dfkhg7gkp/image/upload/v1742415406/dfcm8mifg90iqmehoatq.jpg' className='image'/>
-                <Dropdown_shadow/>
+        <div className={Styles.Main_containerr}>
+            <div className={Styles.Parent_content}>
+                {/* <img src={data[0].Poster} alt="image" className={Styles.image}/> */}
+                {data?.[0]?.Poster ? (
+  <img src={data[0].Poster} alt="image" className={Styles.image} />
+) : (
+  <p>Loading image...</p>
+)}
+                
+                
                 <Detailed_description/>
+                <Dropdown_shadow/>
 
             </div>
         </div>
