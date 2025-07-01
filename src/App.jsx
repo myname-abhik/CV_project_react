@@ -12,6 +12,7 @@ import Signup from './component/Signup';
 import Login from './component/Login';
 import Chat from './component/Chat';
 import Movs from './component/Movs';
+import Page1 from './component/Page1';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,6 +46,7 @@ function App() {
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Signup' element={<Signup/>}/>
         <Route path='/Movies/:id' element={<Movs/>}/>
+        <Route path='/Video/:id' element={<Page1/>}/>
 
       </Routes>
       {/* <Footer/> */}
