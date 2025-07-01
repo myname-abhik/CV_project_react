@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Pages_css/Home.css'
 import 'material-icons/iconfont/material-icons.css';
-import { useEffect,useRef } from 'react';
+import { useEffect,useRef,useState} from 'react';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -13,13 +13,35 @@ import Crousal from '../component/Crousal';
 import movies from '../assets/Movies_info/Movies_info.json'
 import { Movie } from '@mui/icons-material';
 import Movies from '../component/Movies';
-import movie_pickups from '../assets/Movies_info/Movie_pickup.json'
+// import movie_pickups from '../assets/Movies_info/Movie_pickup.json'
 import Lenis from "@studio-freight/lenis";
 import Navbar from '../component/Navbar';
+import axios from 'axios'
 
 
 const Home = () => {
 const pagref = useRef(null)
+ const [movie_pickups, SetMovie_pickups] = useState([]);
+
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`https://cv-backend-theta.vercel.app/use/movie_pickup/insert`);
+      SetMovie_pickups(response.data);
+      console.log(response.data)
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchData();
+}, []);
+
+
   return (
     <>
    
@@ -72,11 +94,22 @@ const pagref = useRef(null)
        
        >
       
-       {movie_pickups.map((movie)=>(
+       {/* {movie_pickups.map((movie)=>(
          <SwiperSlide className='second_swiper-slide'>
          <Movies className="second-swiper-movies" image={movie.Movie_poster} features={movie.Movie_feature} title={movie.Movie_title}/>
          </SwiperSlide>
-       ))}
+       ))} */}
+       {movie_pickups.map((movie) => (
+  <SwiperSlide className='second_swiper-slide'>
+    <Movies
+      className="second-swiper-movies"
+      image={movie.Movie_poster}
+      features={movie.Movie_feature}
+      title={movie.Movie_title}
+    />
+  </SwiperSlide>
+))}
+
        
     
        </Swiper>
