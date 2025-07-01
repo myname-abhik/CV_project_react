@@ -65,7 +65,7 @@ useEffect(() => {
                {
                 movies.map((movie,index)=>(
                   <SwiperSlide  >
-                <Crousal image={movie.Poster} ele={movie.Movie}Description={movie.Description} genre={movie.Genres}/>
+                <Crousal image={movie.Poster} ele={movie.Movie}Description={movie.Description} genre={movie.Genres} name={movie.Movie}/>
                 </SwiperSlide>
                ))}
                </div>
