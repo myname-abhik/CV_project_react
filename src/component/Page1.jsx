@@ -23,6 +23,7 @@ const Page1 = (props) => {
   };
   const onReady = (player) => {
       playerRef.current = player;
+      player.autoplay(true);
   
       player.on("waiting", () => {
         videojs.log("player is waiting");

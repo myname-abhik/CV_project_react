@@ -10,7 +10,7 @@ import Footer from './component/Footer';
 import Mov from './component/Mov';
 import Signup from './component/Signup';
 import Login from './component/Login';
-import Chat from './component/Chat';
+import Pricing from './component/Pricing';
 import Movs from './component/Movs';
 import Page1 from './component/Page1';
 
@@ -42,7 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="/Movies" element={<Mov/>}/>
-        <Route path='/Chat' element={<Chat/>}/>
+        <Route path='/Pricing' element={<Pricing/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Signup' element={<Signup/>}/>
         <Route path='/Movies/:id' element={<Movs/>}/>

@@ -10,7 +10,7 @@ const Navbar = () => {
          <div className="content_box"><Link to="/" className='Link'>Home</Link></div>
             <div className="content_box" id="Browse">Browse<i className="material-icons">arrow_drop_down</i></div>
             <div className="content_box"><Link to="/Movies" className='Link'>Movies</Link></div>
-            <div className="content_box"><Link to="/Chat" className='Link'>Chat</Link></div>
+            <div className="content_box"><Link to="/Pricing" className='Link'>Pricing</Link></div>
             <div className="Search">
                 <div className="Finder"><i className="material-icons">search</i></div>
                 <input type="text" placeholder="Search" ></input>
